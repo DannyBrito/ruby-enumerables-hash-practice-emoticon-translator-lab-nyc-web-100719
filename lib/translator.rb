@@ -16,7 +16,8 @@ end
 def get_japanese_emoticon(path, emoticon)
   # code goes here
   emoticon_data = load_library(path)
-  
+  return emoticon_data['get_emoticon'][emoticon] if emoticon_data['get_emoticon'][emoticon] != nil
+  "no existing emoticon"
 end
 
 def get_english_meaning
